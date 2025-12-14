@@ -1,32 +1,21 @@
-name: Terraform CI/CD Pipeline
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
 jobs:
   terraform:
+    name: Apply Terraform
     runs-on: ubuntu-latest
-
-    permissions:
-      id-token: write
-      contents: read
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
       with:
         terraform_version: 1.5.6
 
-    - name: Configure AWS credentials (OIDC)
-      uses: aws-actions/configure-aws-credentials@v4
+    - name: Configure AWS Credentials with OIDC
+      uses: aws-actions/configure-aws-credentials@v2
       with:
-        role-to-assume: arn:aws:iam::<SANDBOX_ACCOUNT_ID>:role/GitHubActionsTerraformRole
+        role-to-assume: arn:aws:iam::319332497857:role/GitHubActionsTerraformRole
         aws-region: us-east-1
 
     - name: Terraform Init
