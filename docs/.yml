@@ -1,0 +1,42 @@
+## Optional Data Services
+
+### Amazon RDS Aurora
+
+Used when applications require:
+
+* Relational schemas
+* Transactions
+* High availability with Multi-AZ
+
+Provisioned as a reusable Terraform module.
+
+### Amazon DynamoDB
+
+Used for:
+
+* Serverless, low-latency workloads
+* High-scale key-value access
+
+> **Important distinction**:
+>
+> * DynamoDB (Terraform backend) → **state locking only**
+> * DynamoDB (module) → **application data**
+
+  # What’s Intentionally Excluded
+
+To keep this repository focused, the following are excluded:
+- Full application source code
+- Secrets management solutions
+- Centralized observability stacks
+- Multi-region disaster recovery
+
+These can be added without modifying the core architecture.
+
+  # Design Decisions
+
+This project prioritizes clarity, modularity, and production realism.
+
+Key decisions:
+- Terraform modules to enable reuse across environments
+- GitOps (Argo CD) to eliminate configuration drift
+- Separation of infrastructure and application delivery
