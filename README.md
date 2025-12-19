@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository demonstrates a **production-style AWS infrastructure** built with **Terraform**, following **modular design**, **GitOps principles**, and **cloud best practices**. It provisions a complete EKS-based platform with optional data services and CI/CD automation.
+This repository demonstrates a **scalable AWS infrastructure** built with **Terraform**, following **modular design**, **GitOps principles**, and **cloud best practices**. It provisions a complete EKS-based platform with optional data services and CI/CD automation.
 
 The project is intentionally structured to scale from a **simple EKS environment** to a **multi-account landing zone**
 ---
