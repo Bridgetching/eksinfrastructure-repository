@@ -40,3 +40,10 @@ Key decisions:
 - Terraform modules to enable reuse across environments
 - GitOps (Argo CD) to eliminate configuration drift
 - Separation of infrastructure and application delivery
+
+# Design Decisions
+
+## Why This Structure?
+- Encourages module reusability and separation of concerns
+- Mirrors real enterprise cloud architectures
+- Scales from single-account to multi-account environment
