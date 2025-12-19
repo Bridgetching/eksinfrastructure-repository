@@ -194,6 +194,7 @@ Namespace: default
 Save the application.
 
 ArgoCD will now monitor your Git repository and automatically deploy application changes to your EKS cluster, completing the GitOps workflow.
+
 ---
 
 ---
